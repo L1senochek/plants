@@ -1,0 +1,331 @@
+@media (max-width: 380px) {
+  body {
+    max-width: 380px;
+  }
+
+  .container__header,
+  .main__container,
+  .container__footer {
+    max-width: 380px;
+  }
+
+  .container__header {
+    height: 96px;
+  }
+
+  .navbar {
+    max-width: 380px;
+    height: 96px;
+  }
+
+  .navbar__logo {
+    padding-right: 241px;
+    margin: 0;
+  }
+
+  /* ---------------------------------------- */
+  .container__welcome {
+    max-width: 380px;
+    height: 300px;
+  }
+
+  .welcome__leafs {
+    display: none;
+  }
+
+  .welcome__section {
+    margin: 0;
+  }
+
+  .welcome__plants {
+    font-size: 25px;
+    line-height: 35px;
+    margin-left: -9px;
+    padding-top: 26px;
+  }
+
+  .welcome__description {
+    margin-left: -9px;
+    margin-top: 20px;
+  }
+
+  .welcome__learn-more {
+    margin-top: 26px;
+    margin-left: -9px;
+    font-size: 10px;
+    width: 100px;
+    height: 34.14px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 9px;
+  }
+
+  /* ---------------------------------------- */
+  .container__about {
+    height: 516px;
+  }
+
+  .about__section {
+    max-height: 516px;
+    height: 516px;
+    max-width: 380px;
+  }
+
+  .about__us-section {
+    max-width: 380px;
+  }
+
+  .us-section__experienced {
+    font-size: 25px;
+    line-height: 32.57px;
+    width: 288px;
+    margin-top: -5px;
+    margin-bottom: 0px;
+  }
+
+  .us-section__description {
+    margin-top: 14px;
+    font-size: 15px;
+    line-height: 25px;
+    width: 330px;
+  }
+
+  .about__houseplant1 {
+    background: url(../assets/img/houseplant1_380.png);
+    width: 150px;
+    height: 147px;
+    margin-bottom: 0px;
+    margin-top: -50px;
+  }
+
+  /* ---------------------------------------- */
+  .container__service {
+    height: 3150px;
+    max-width: 380px;
+  }
+
+  .service__services-content {
+    width: 380px;
+    height: 69px;
+    margin: 0;
+  }
+
+  .services__our-projects {
+    font-size: 25px;
+    line-height: 32.57px;
+    width: 287px;
+    padding-left: 25px;
+    padding-top: 30px;
+    margin: 0;
+  }
+
+  .services__btns {
+    margin: 0;
+    width: 252px;
+    height: 79px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 25px;
+    margin-top: 40px;
+  }
+
+  .btns__btn {
+    width: 121px;
+    height: 35px;
+    font-size: 15px;
+    line-height: 19.54px;
+  }
+
+  .btn__planting {
+    margin-top: 9px;
+  }
+
+  .service__services-items {
+    flex-direction: row;
+    width: 380px;
+    height: 3150px;
+    margin: 0;
+    margin-top: 183px;
+    padding-left: 50px;
+  }
+
+  .services-item {
+    margin: 0;
+  }
+
+  .row-two,
+  .row-three {
+    margin: 0;
+  }
+
+  .mobile-last-item {
+    margin-bottom: -6px;
+  }
+
+  /* ---------------------------------------- */
+  .container__prices {
+    height: auto;
+    max-width: 380px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prices__wrapper {
+    margin: 0;
+
+  }
+
+  .wrapper__prices-description {
+    margin: 0;
+    align-items: center;
+  }
+
+  .prices__heading {
+    font-size: 25px;
+    line-height: 30.26px;
+    margin: 0;
+    padding-top: 25px;
+  }
+
+  .prices__items {
+    margin-top: 37px;
+    width: 224px;
+    height: auto;
+  }
+
+  .price-item {
+    width: 180px;
+    margin-bottom: 14px;
+    font-size: 15px;
+    padding-left: 31px;
+    padding-right: 38px;
+    margin-left: 21px;
+  }
+
+  .item__basics {
+    margin-top: 29px;
+  }
+
+  .prices__description-call-us {
+    margin: 21px 0px 0px 0px;
+    align-items: center;
+  }
+
+  .call-us__text {
+    width: 230px;
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .call-us__btn {
+    margin-top: 20px;
+    width: 121px;
+    height: 35px;
+    font-size: 15px;
+    line-height: 19.54px;
+    margin-bottom: 40px;
+  }
+
+  .description__leafs {
+    display: none;
+  }
+
+  .price-item__wrapper {
+    margin-bottom: 14px;
+  }
+
+  .item__accordion{
+    width: 180px;
+    margin: 0px 0px 0px 21px;
+    padding: 0px 40px 0px 15px;
+  }
+
+  .price-item {
+    margin-bottom: 0px;
+  }
+
+  .item__pro-care{
+    margin-bottom: 11px;
+  }
+
+  .item__line {
+    width: 150px;
+  }
+  /* ---------------------------------------- */
+  .container__contacts {
+    height: 445px;
+    max-width: 380px;
+  }
+
+  .contacts__title {
+    margin-top: 25px;
+    margin-left: -2px;
+    font-size: 25px;
+    line-height: 32.57px;
+  }
+
+  .contacts__btn {
+    margin-top: 0px;
+    width: 300px;
+    padding-left: 14px;
+    padding-right: 18px;
+    margin-bottom: 0px;
+  }
+
+  .contacts__wooman1 {
+    background: url(../assets/img/contact_us/contact_woman_1_380.png);
+    width: 100px;
+    height: 124.25px;
+    margin-left: 0px;
+    margin-top: 0px;
+    order: 3;
+    z-index: 2;
+  }
+
+  .contacts__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+    z-index: 6;
+  }
+
+  .contacts__btn-dropdown{
+    width: 300px;
+  }
+
+  .contacts__adresses {
+    width: 282px;
+  }
+
+  .contacts__btn-dropdown__wrapper {
+    margin-bottom: 42px;
+  }
+
+  .adresses__details {
+    font-size: 13px;
+    line-height: 27px;
+  }
+
+  .adresses__btn {
+    margin-top: 15px;
+    margin-left: 45px;
+  }
+  /* ---------------------------------------- */
+  .container__footer {
+    height: 146px;
+    max-width: 380px;
+  }
+
+  .footer__data {
+    margin: 0;
+    padding-top: 10px;
+  }
+
+  .data__items,
+  .data__rss {
+    margin-left: -5px;
+    margin-top: 0px;
+  }
+}

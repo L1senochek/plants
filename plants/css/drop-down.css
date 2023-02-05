@@ -1,0 +1,153 @@
+.contacts__wrapper{
+  height: 500px;
+}
+
+.contacts__btn-active {
+  box-shadow: none;
+  background: #C1E698;
+  border: 1px solid #D6E7D2;
+  border-radius: 0px;
+  cursor: pointer;
+  padding-left: 17px;
+  padding-right: 36px;
+  padding-top: 3px;
+}
+
+.contacts__btn-active>.btn__svg{
+  rotate: 180deg;
+}
+
+._selected-city>.btn__svg>circle{
+  fill: #AEA1A1;
+}
+
+.contacts__btn-active>.btn__svg>circle{
+  fill: #8BA07E;
+}
+
+.contacts__btn-active>.btn__svg>path{
+  stroke: #FFFFFF;
+}
+
+.contacts__btn-dropdown {
+  display: flex; 
+  flex-direction: column;
+  height: 0px;
+  width: 450px;
+  background: #DCE9D9;
+  padding: 0px 20px;
+  overflow: hidden;
+  transition: 1.5s;
+  position: absolute;
+  z-index: 10;
+}
+
+._dropdown-active {
+  height: 234px;
+  transition: 1.5s;
+  transition-property: height;
+}
+
+.dropdown__link {
+  color: #499A18;
+  text-decoration: none;
+  font-family: Inter-Regular;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  padding-left: 6px;
+}
+
+.dropdown__link__wrapper {
+  cursor: pointer;
+  padding-top: 8px;
+}
+
+.dropdown__link__wrapper:hover>.dropdown__link {
+  color: #717171;
+}
+
+.dropdown__line {
+
+  border: 1px solid #D9D9D9;
+  width: 380px;
+  height: 0px;
+}
+
+.dropdown__link__wrapper:hover>.dropdown__line {
+  border: 1px solid #717171;
+}
+
+.contacts__adresses {
+  flex-direction: column;
+  width: 448px;
+  height: 214px;
+  padding: 17px 33px 32px;
+  border: 1px solid #000000;
+  background: #EDF2EC;
+  border-radius: 20px;
+} 
+
+.adresses__details{
+  display: flex;
+  font-family: Inter-Regular;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+}
+
+.adresses__contacts{
+  color: #000000;
+}
+
+.title-details{
+  margin: 0;
+}
+
+.contacts__details{
+  padding-left: 15px;
+  color: #717171;
+}
+
+.description-details{
+  margin: 0;
+}
+
+.adresses__btn{
+  width: 122px;
+  height: 26px;
+  margin-top: 20px;
+  margin-left: 129px;
+  border: 1px solid #E06733;
+  background: #EDF2EC;
+  border-radius: 5px;
+}
+
+.adresses-canadaigua,
+.adresses-new-york,
+.adresses-yonkers,
+.adresses-sherrill {
+  display: none;
+}
+
+._adresses-canadaigua__active,
+._adresses-new-york__active,
+._adresses-yonkers__active,
+._adresses-sherrill__active {
+  display: flex;
+}
+
+._selected-city{
+  background: #C1E698;
+}
+
+._btn-active>.btn__svg{
+  rotate: 180deg; 
+}
+
+.btn__call-us{
+  text-decoration: none;
+  color: #000000;
+}

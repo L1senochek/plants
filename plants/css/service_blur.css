@@ -1,0 +1,9 @@
+._btnActive {
+  background-color: #E06733;
+  color: #FFFFFF;
+}
+
+._activeBlur {
+  filter: blur(2px);
+  transition: 2s;
+}
