@@ -4,29 +4,28 @@ const btnDropdownWrapper = document.querySelectorAll('.contacts__btn-dropdown__w
 const btnContacts = document.querySelectorAll('.contacts__btn');
 const btnDropdown = document.querySelectorAll('.contacts__btn-dropdown');
 const contactsAdressesWrapper = document.querySelectorAll('contacts__adresses__wrapper');
-const contactsAdresses  = document.getElementsByClassName('contacts__adresses');
+const contactsAdresses = document.getElementsByClassName('contacts__adresses');
 const dropdownLinks = document.querySelectorAll('.dropdown__link__wrapper');
 const adressesCanadaigua = document.querySelectorAll('.adresses-canadaigua');
 const adressesNewYork = document.querySelectorAll('.adresses-new-york');
 const adressesYonkers = document.querySelectorAll('.adresses-yonkers');
 const adressesSherrill = document.querySelectorAll('.adresses-sherrill');
 const btnSvg = document.querySelectorAll('.btn__svg');
-
-let btnDropdownArr =[];
+let btnDropdownArr = [];
 
 for (const iterator of btnDropdown) {
   btnDropdownArr.push(iterator);
-}  
+}
 
-btnContacts[0].addEventListener("click", function() {
-  btnDropdownWrapper.forEach(x => x.classList.toggle('btn-dropdown__wrapper-active'));
-  btnContacts.forEach(x => x.classList.toggle('contacts__btn-active'));
-  btnDropdown.forEach(x => x.classList.toggle('_dropdown-active'));
+btnContacts[0].addEventListener("click", function () {
+  toggleClass(btnDropdownWrapper, 'btn-dropdown__wrapper-active');
+  toggleClass(btnContacts, 'contacts__btn-active');
+  toggleClass(btnDropdown, '_dropdown-active');
   removeAll();
   if (btnContacts[0].classList.contains('_btn-active') && btnContacts[0].classList.contains('contacts__btn-active')) {
-    btnContacts.forEach(x => x.classList.remove('contacts__btn-active'));
-  } 
-  btnContacts.forEach(x => x.classList.toggle('_btn-active'));
+    removedClass(btnContacts, 'contacts__btn-active');
+  }
+  toggleClass(btnContacts, '_btn-active');
 });
 
 function removeAll() {
@@ -40,7 +39,15 @@ function removeAll() {
   elemSherrill.classList.remove('_adresses-sherrill__active');
 }
 
-dropdownLinks.forEach(link =>{
+function removedClass(parameter, activeClass) {
+  return parameter.forEach(x => x.classList.remove(activeClass));
+}
+
+function toggleClass(parameter, activeClass) {
+  return parameter.forEach(x => x.classList.toggle(activeClass));
+}
+
+dropdownLinks.forEach(link => {
   link.addEventListener('click', selectLink);
 });
 
@@ -49,43 +56,38 @@ function selectLink() {
   let selectedLink = this.closest('.contacts__btn-dropdown__wrapper');
   let currentLinkText = selectedLink.querySelector('.btn__city');
   currentLinkText.innerText = textLink;
-  btnContacts.forEach(x => x.classList.remove('contacts__btn-active'));
-  btnContacts.forEach(x => x.classList.remove('_btn-active'));
-  btnDropdown.forEach(x => x.classList.remove('_dropdown-active'));
+  removedClass(btnContacts, 'contacts__btn-active');
+  removedClass(btnContacts, '_btn-active');
+  removedClass(btnDropdown, '_dropdown-active');
   btnContacts.forEach(x => x.classList.add('_selected-city'));
 
   if (textLink === 'Canandaigua, NY') {
-    removeAdressesNewYork();
-    removeAdressesYonkers();
-    removeAdressesSherrill();
-    adressesCanadaigua.forEach(x => x.classList.toggle('_adresses-canadaigua__active'));
-  } else if(textLink === 'New York City'){
-    removeAdressesCanadaigua();
-    removeAdressesYonkers();
-    removeAdressesSherrill();
-    adressesNewYork.forEach(x => x.classList.toggle('_adresses-new-york__active'));
-  } else if(textLink === 'Yonkers, NY'){
-    removeAdressesCanadaigua();
-    removeAdressesNewYork();
-    removeAdressesSherrill();
-    adressesYonkers.forEach(x => x.classList.toggle('_adresses-yonkers__active'));
-  } else if(textLink === 'Sherrill, NY'){
-    removeAdressesCanadaigua();
-    removeAdressesNewYork();
-    removeAdressesYonkers();
-    adressesSherrill.forEach(x => x.classList.toggle('_adresses-sherrill__active'));
+    removeAdresses(adressesYonkers, '_adresses-yonkers__active');
+    removeAdresses(adressesYonkers, '_adresses-yonkers__active');
+    removeAdresses(adressesSherrill, '_adresses-new-york__active');
+    addAdresses(adressesCanadaigua, '_adresses-canadaigua__active');
+  } else if (textLink === 'New York City') {
+    removeAdresses(adressesCanadaigua, '_adresses-canadaigua__active');
+    removeAdresses(adressesYonkers, '_adresses-yonkers__active');
+    removeAdresses(adressesSherrill, '_adresses-new-york__active');
+    addAdresses(adressesNewYork, '_adresses-new-york__active');
+  } else if (textLink === 'Yonkers, NY') {
+    removeAdresses(adressesCanadaigua, '_adresses-canadaigua__active');
+    removeAdresses(adressesNewYork, '_adresses-new-york__active');
+    removeAdresses(adressesSherrill, '_adresses-new-york__active');
+    addAdresses(adressesYonkers, '_adresses-yonkers__active');
+  } else if (textLink === 'Sherrill, NY') {
+    removeAdresses(adressesCanadaigua, '_adresses-canadaigua__active');
+    removeAdresses(adressesNewYork, '_adresses-new-york__active');
+    removeAdresses(adressesYonkers, '_adresses-yonkers__active');
+    addAdresses(adressesSherrill, '_adresses-sherrill__active');
   }
+}
 
-  function removeAdressesCanadaigua() {
-    adressesCanadaigua.forEach(x => x.classList.remove('_adresses-canadaigua__active'));
-  }
-  function removeAdressesNewYork() {
-    adressesNewYork.forEach(x => x.classList.remove('_adresses-new-york__active'));
-  }
-  function removeAdressesYonkers() {
-    adressesYonkers.forEach(x => x.classList.remove('_adresses-yonkers__active'));
-  }
-  function removeAdressesSherrill() {
-    adressesSherrill.forEach(x => x.classList.remove('_adresses-sherrill__active'));
-  }
+function addAdresses(adresses, active) {
+  adresses.forEach(x => x.classList.toggle(active));
+}
+
+function removeAdresses(adresses, active) {
+  adresses.forEach(x => x.classList.remove(active));
 }

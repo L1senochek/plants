@@ -1,4 +1,4 @@
-.contacts__wrapper{
+.contacts__wrapper {
   height: 500px;
 }
 
@@ -13,24 +13,24 @@
   padding-top: 3px;
 }
 
-.contacts__btn-active>.btn__svg{
+.contacts__btn-active>.btn__svg {
   rotate: 180deg;
 }
 
-._selected-city>.btn__svg>circle{
+._selected-city>.btn__svg>circle {
   fill: #AEA1A1;
 }
 
-.contacts__btn-active>.btn__svg>circle{
+.contacts__btn-active>.btn__svg>circle {
   fill: #8BA07E;
 }
 
-.contacts__btn-active>.btn__svg>path{
+.contacts__btn-active>.btn__svg>path {
   stroke: #FFFFFF;
 }
 
 .contacts__btn-dropdown {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   height: 0px;
   width: 450px;
@@ -87,9 +87,9 @@
   border: 1px solid #000000;
   background: #EDF2EC;
   border-radius: 20px;
-} 
+}
 
-.adresses__details{
+.adresses__details {
   display: flex;
   font-family: Inter-Regular;
   font-weight: 400;
@@ -98,24 +98,24 @@
   letter-spacing: 0.05em;
 }
 
-.adresses__contacts{
+.adresses__contacts {
   color: #000000;
 }
 
-.title-details{
+.title-details {
   margin: 0;
 }
 
-.contacts__details{
+.contacts__details {
   padding-left: 15px;
   color: #717171;
 }
 
-.description-details{
+.description-details {
   margin: 0;
 }
 
-.adresses__btn{
+.adresses__btn {
   width: 122px;
   height: 26px;
   margin-top: 20px;
@@ -139,15 +139,15 @@
   display: flex;
 }
 
-._selected-city{
+._selected-city {
   background: #C1E698;
 }
 
-._btn-active>.btn__svg{
-  rotate: 180deg; 
+._btn-active>.btn__svg {
+  rotate: 180deg;
 }
 
-.btn__call-us{
+.btn__call-us {
   text-decoration: none;
   color: #000000;
 }

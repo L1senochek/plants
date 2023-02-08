@@ -15,22 +15,19 @@ const gardensArr = [];
 const lawnArr = [];
 const servicesItemArr = [];
 
-for (const iterator of itemPlanting) {
-  plantingArr.push(iterator);
+function pushArr(item, arr) {
+  for (const iterator of item) {
+    arr.push(iterator);
+  }
+  return arr;
 }
-for (const iterator of itemGardens) {
-  gardensArr.push(iterator);
-}
-for (const iterator of itemLawn) {
-  lawnArr.push(iterator);
-}
-for (const iterator of servicesItem) {
-  servicesItemArr.push(iterator);
-}
-for (const iterator of btnService) {
-  btnsArr.push(iterator);
-}
-const arr = [];
+
+pushArr(itemPlanting, plantingArr);
+pushArr(itemGardens, gardensArr);
+pushArr(itemLawn, lawnArr);
+pushArr(servicesItem, servicesItemArr);
+pushArr(btnService, btnsArr);
+
 for (let i = 0; i < btnsArr.length; i++) {
   btnsArr[i].addEventListener("click", function () {
     btnsArr[i].classList.toggle('_btnActive');
@@ -40,7 +37,7 @@ for (let i = 0; i < btnsArr.length; i++) {
       btnActive.forEach(node => {
         arrActive.push(node);
       });
-    } 
+    }
     const setFullArr = Array.from(new Set(btnsArr));
     const setActive = Array.from(new Set(arrActive));
     let filterArr = setFullArr.filter(i => !setActive.includes(i));
@@ -54,52 +51,40 @@ for (let i = 0; i < btnsArr.length; i++) {
       });
     }
     ////////////////////////////////////////////////////////////////////////
-    function removeAllBlur () {
+    function removeAllBlur() {
       servicesItemArr.forEach(servicesItemelem => {
         servicesItemelem.classList.remove('_activeBlur');
       });
       return servicesItemArr;
     }
-    function addGardensBlur() {
-      gardensArr.forEach(gardenselem => {
-        gardenselem.classList.toggle('_activeBlur');
+    function addBlur(arr) {
+      arr.forEach(elem => {
+        elem.classList.toggle('_activeBlur');
       });
-      return gardensArr;
-    }
-    function addLawnBlur() {
-      lawnArr.forEach(lawnelem => {
-        lawnelem.classList.toggle('_activeBlur');
-      });
-      return lawnArr;
-    }
-    function addPlantingBlur() {
-      plantingArr.forEach(plantingelem => {
-        plantingelem.classList.toggle('_activeBlur');
-      });
-      return plantingArr;
+      return arr;
     }
     if (arrActive.length === 0) {
-      removeAllBlur ();
-    } else if(arrActive.length === 1){
-      removeAllBlur ();
+      removeAllBlur();
+    } else if (arrActive.length === 1) {
+      removeAllBlur();
       if (arrActive[0].classList.contains('gardens')) {
-        addLawnBlur();
-        addPlantingBlur();
-      } else if(arrActive[0].classList.contains('lawn')){
-        addGardensBlur();
-        addPlantingBlur();
-      } else if(arrActive[0].classList.contains('planting')){
-        addGardensBlur();
-        addLawnBlur();
-      }  
-    } else if(arrActive.length === 2){
-      removeAllBlur ();     
+        addBlur(lawnArr);
+        addBlur(plantingArr);
+      } else if (arrActive[0].classList.contains('lawn')) {
+        addBlur(gardensArr);
+        addBlur(plantingArr);
+      } else if (arrActive[0].classList.contains('planting')) {
+        addBlur(gardensArr);
+        addBlur(lawnArr);
+      }
+    } else if (arrActive.length === 2) {
+      removeAllBlur();
       if ((arrActive[0].classList.contains('gardens') && arrActive[1].classList.contains('lawn')) || (arrActive[1].classList.contains('gardens') && arrActive[0].classList.contains('lawn'))) {
-        addPlantingBlur();
-      } else if((arrActive[0].classList.contains('lawn') && arrActive[1].classList.contains('planting')) || (arrActive[1].classList.contains('lawn') && arrActive[0].classList.contains('planting'))){
-        addGardensBlur();
-      } else if((arrActive[0].classList.contains('gardens') && arrActive[1].classList.contains('planting')) || (arrActive[1].classList.contains('gardens') && arrActive[0].classList.contains('planting'))){
-        addLawnBlur();
+        addBlur(plantingArr);
+      } else if ((arrActive[0].classList.contains('lawn') && arrActive[1].classList.contains('planting')) || (arrActive[1].classList.contains('lawn') && arrActive[0].classList.contains('planting'))) {
+        addBlur(gardensArr);
+      } else if ((arrActive[0].classList.contains('gardens') && arrActive[1].classList.contains('planting')) || (arrActive[1].classList.contains('gardens') && arrActive[0].classList.contains('planting'))) {
+        addBlur(lawnArr);
       }
     }
   });

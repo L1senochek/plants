@@ -397,8 +397,17 @@ body {
   color: #E3E1D5;
 }
 
-.price-item__wrapper{
+.price-item__wrapper {
   margin-bottom: 32px;
+  max-width: 250px;
+  margin-top: 0px;
+  margin-left: 40px;
+  border-radius: 20px;
+  background-color: #EDF2EC;
+}
+
+.item__basics {
+  margin-top: 35px;
 }
 
 .price-item {
@@ -417,12 +426,7 @@ body {
   align-items: center;
   padding-left: 38px;
   padding-right: 41px;
-  margin-left: 42px;
   transition: 1.5s;
-}
-
-.item__basics {
-  margin-top: 35px;
 }
 
 .item__button-circle {
@@ -511,7 +515,7 @@ body {
   margin-bottom: 47px;
 }
 
-.select-btn__wrapper{
+.select-btn__wrapper {
   width: 450px;
   background-color: #D6E7D2;
   border: 4px solid #D6E7D2;
@@ -596,17 +600,17 @@ body {
   padding-right: 0px;
 }
 
-.btn__link{
+.btn__link {
   text-decoration: none;
   color: #000000;
 }
 
-.btn__contacts-us{
+.btn__contacts-us {
   text-decoration: none;
   color: #E06733;
 }
 
 .welcome__learn-more:hover>.btn__link,
-.call-us__btn:hover>.btn__contacts-us{
+.call-us__btn:hover>.btn__contacts-us {
   color: #FFFFFF;
 }

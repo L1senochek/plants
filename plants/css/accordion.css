@@ -1,19 +1,16 @@
 .item__accordion {
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   width: 250px;
   align-items: flex-start;
-  margin: 0px 0px 0px 42px;
   background: #D6E7D2;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   height: 0px;
-  
   padding: 0px 40px 0px 40px;
   overflow: hidden;
   transition-property: height;
   transition: 1.5s;
-
 }
 
 .item__line {
@@ -74,7 +71,6 @@
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
   background: #D6E7D2;
-  
 }
 
 .prise-item__accordion>.item__button-circle {
