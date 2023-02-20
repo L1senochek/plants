@@ -1,5 +1,5 @@
 # Plants
-# https://l1senochek.github.io/plants/
+# https://l1senochek.github.io/plants/plants/
 
 ### Created landing page of the site. 
 ### Applied: valid semantic adaptive layout, JavaScript, pixel perfect.
