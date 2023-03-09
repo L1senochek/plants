@@ -1,0 +1,115 @@
+@media (max-width: 380px) {
+  body._lock {
+    overflow: hidden;
+    position: fixed;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 30px;
+    width: 40px;
+    cursor: pointer;
+    z-index: 4;
+  }
+
+  .hamburger-menu__first-line,
+  .hamburger-menu__second-line,
+  .hamburger-menu__third-line,
+  .hamburger-menu__fourth-line {
+    display: flex;
+    border-radius: 2px;
+    width: 40px;
+    background-color: #717171;
+    height: 2px;
+    margin: 2px 0px;
+    transform-origin: left;
+    transition: all 0.5s;
+  }
+
+  .navbar__hamburger._active .hamburger-menu__first-line {
+    transform: rotate(36.8deg);
+  }
+
+  .navbar__hamburger._active .hamburger-menu__second-line,
+  .navbar__hamburger._active .hamburger-menu__third-line {
+    opacity: 0;
+  }
+
+  .navbar__hamburger._active .hamburger-menu__fourth-line {
+    transform: rotate(-36.8deg);
+  }
+
+  /* ------------------navbar-menu------------------ */
+  .navbar__li {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 50%;
+    height: 90%;
+    background-color: rgba(237, 242, 236, 0.9);
+    padding: 90px 40px 30px 40px;
+    transition: right 0.5s ease 0s;
+    overflow: auto;
+    justify-content: flex-end;
+    z-index: 2;
+  }
+
+  .navbar__li._active {
+    right: 0;
+    overflow: auto;
+  }
+
+  .navbar._active {
+    content: "";
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    height: 96px;
+    z-index: 3;
+    background-color: #EDF2EC;
+  }
+
+  .navbar__li._active::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    height: 96px;
+    z-index: 3;
+    background-color: #EDF2EC;
+  }
+
+  .navbar__list {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 0;
+    margin-bottom: 28px;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 2;
+  }
+
+  .navbar__link {
+    color: rgb(0, 0, 0);
+  }
+
+  .navbar__logo {
+    z-index: 3;
+  }
+
+  .navbar__item {
+    flex-wrap: wrap;
+    margin: 0px 0px 30px 0px;
+  }
+
+  .navbar__item:last-child {
+    margin-bottom: 0;
+  }
+}
